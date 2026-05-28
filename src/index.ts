@@ -2,9 +2,9 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
-import { validURL } from "../lib/validUrl";
-import { fetchLinkPreview } from "../lib/fetchPreview";
-import { normalizeUrl } from "../lib/normalizeUrl";
+import { validURL } from "../lib/validUrl.js";
+import { fetchLinkPreview } from "../lib/fetchPreview.js";
+import { normalizeUrl } from "../lib/normalizeUrl.js";
 import {
   DEFAULT_TIMEOUT,
   MAX_TIMEOUT,
