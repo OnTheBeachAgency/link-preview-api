@@ -14,6 +14,7 @@ export interface LinkPreviewResponse {
   keywords?: string[];
   themeColor?: string;
   publisher?: string;
+  twitterTitle?: string;
   twitterCard?: string;
   twitterSite?: string;
   video?: string;

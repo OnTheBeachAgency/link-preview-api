@@ -33,8 +33,7 @@ export async function fetchLinkPreview(
       );
     };
 
-    const title =
-      getMeta("og:title") || getMeta("twitter:title") || $("title").text() || undefined;
+    const title = $("title").text() || undefined;
 
     const description =
       getMeta("og:description") ||
@@ -82,9 +81,12 @@ export async function fetchLinkPreview(
 
     const themeColor = getMeta("theme-color") || undefined;
 
-    const publisher =
-      getMeta("og:site_name") || getMeta("publisher") || undefined;
+    const publisher = getMeta("publisher") || undefined;
 
+    const ogTitle = getMeta("og:title") || undefined;
+    const ogSiteName = getMeta("og:site_name") || undefined;
+
+    const twitterTitle = getMeta("twitter:title") || undefined;
     const twitterCard = getMeta("twitter:card") || undefined;
     const twitterSite = getMeta("twitter:site") || undefined;
 
@@ -113,6 +115,7 @@ export async function fetchLinkPreview(
       keywords,
       themeColor,
       publisher,
+      twitterTitle,
       twitterCard,
       twitterSite,
       video,
