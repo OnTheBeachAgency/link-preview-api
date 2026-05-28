@@ -2,14 +2,14 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
-import { validURL } from "../lib/validUrl.js";
-import { fetchLinkPreview } from "../lib/fetchPreview.js";
-import { normalizeUrl } from "../lib/normalizeUrl.js";
+import { validURL } from "../lib/validUrl.ts";
+import { fetchLinkPreview } from "../lib/fetchPreview.ts";
+import { normalizeUrl } from "../lib/normalizeUrl.ts";
 import {
   DEFAULT_TIMEOUT,
   MAX_TIMEOUT,
   MIN_TIMEOUT,
-} from "../constants";
+} from "../constants/index.ts";
 
 const querySchema = z.object({
   url: z
